@@ -13,5 +13,20 @@ module.exports = {
                 path: `${__dirname}/blog`,
             }
         },
+        {
+            resolve: `gatsby-plugin-mdx`,
+            options: {
+                gatsbyRemarkPlugins: [
+                    {
+                        resolve: `gatsby-remark-images`,
+                        options: {
+                            maxWidth: 590,
+                        },
+                    },
+                    `gatsby-remark-autolink-headers`,
+                    `gatsby-remark-prismjs`,
+                ],
+            },
+        },
     ]
 }
